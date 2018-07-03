@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <SeekBar
+        android:id="@+id/volBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="13dp" />
+    <TextView
+        android:id="@+id/noMusic"
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#657afd"
+        android:textSize="30sp"
+        android:text="暂无歌曲"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_marginBottom="60dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/volBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+    <LinearLayout
+        android:paddingTop="5dp"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <Button
+            android:id="@+id/prv"
+            android:layout_marginRight="20dp"
+            android:layout_width="40dp"
+            android:background="@mipmap/prv"
+            android:layout_height="40dp" />
+        <Button
+            android:id="@+id/pause"
+            android:background="@mipmap/start2"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+        <Button
+            android:id="@+id/next"
+            android:layout_marginLeft="20dp"
+            android:background="@mipmap/next"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+
+    </LinearLayout>
+</RelativeLayout>
